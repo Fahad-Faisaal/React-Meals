@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Meal from '../Meal/Meal';
 import './Meals.css';
 
 const Meals = () => {
@@ -7,12 +8,17 @@ const Meals = () => {
   useEffect(() => {
     fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
     .then(res => res.json())
-    .then(data => setMeals(prevState => [...prevState, ...data.meals]));
+    .then(data => setMeals(data.meals));
   }, []);
 
   return (
-    <div>
-      <h1>{meals.length}</h1>
+    <div className='container meals'>
+      {
+        meals.map(meal => <Meal 
+          key={meal.idMeal} 
+          meal={meal}
+          />)
+      }
     </div>
   );
 };
