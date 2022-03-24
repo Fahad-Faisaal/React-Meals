@@ -13,8 +13,9 @@ const Main = () => {
     setFavourite(newFavourite);
   }
 
-  const removeHandler = favourite => {
-    console.log(favourite);
+  const removeHandler = selectedFavourite => {
+    const restFavourite = favourite.filter(fav => fav.idMeal !== selectedFavourite.idMeal);
+    setFavourite(restFavourite);
   }
 
   return (
