@@ -3,11 +3,11 @@ import './FavouritesInfo.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRemove } from '@fortawesome/free-solid-svg-icons';
 
-const FavouritesInfo = () => {
+const FavouritesInfo = ({favourite, removeHandler}) => {
   return (
     <div className='favourites-info'>
-      <p>Food Name</p>  
-      <button className="btn btn-remove"><FontAwesomeIcon icon={faRemove} /></button>
+      <p className='favourites-info-text'>{favourite.strMeal}</p>  
+      <button onClick={() => removeHandler(favourite)} className="btn btn-remove"><FontAwesomeIcon icon={faRemove} /></button>
     </div> 
   );
 };

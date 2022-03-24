@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
   return (
     <div className='header'>
-      <h1>Header</h1>
+      <h1>React Meals</h1>
     </div>
   );
 };
