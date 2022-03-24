@@ -1,10 +1,12 @@
 import './App.css';
-import Meals from './components/Meals/Meals';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
 const App = () => {
   return (
     <div className="App">
-      <Meals />
+      <Header />
+      <Main />
     </div>
   )
 }

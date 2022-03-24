@@ -12,7 +12,7 @@ const Meals = () => {
   }, []);
 
   return (
-    <div className='container meals'>
+    <div className='meals'>
       {
         meals.map(meal => <Meal 
           key={meal.idMeal} 
