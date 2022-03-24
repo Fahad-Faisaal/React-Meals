@@ -2,6 +2,11 @@
   background-color: #505050;
 }
 
+.favourite {
+  position: sticky;
+  top: 2rem;
+}
+
 .favourites-title {
   margin-top: 2rem;
   font-weight: 900;

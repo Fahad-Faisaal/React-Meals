@@ -1,7 +1,7 @@
 import React from 'react';
 import './Meal.css';
 
-const Meal = ({meal}) => {
+const Meal = ({meal, addToFavHandler}) => {
   const {strMealThumb, strMeal, strArea, strCategory} = meal
   return (
     <div className='meal'>
@@ -12,7 +12,7 @@ const Meal = ({meal}) => {
         <p className='meal-text'>Catagory: {strCategory}</p>
       </div>
       <div className='meal-btn-container'>
-        <button className='btn btn-add'>Add To Favourites</button>
+        <button onClick={() => addToFavHandler(meal)} className='btn btn-add'>Add To Favourites</button>
       </div>
     </div>
   );  

@@ -3,11 +3,14 @@ import FavouritesInfo from '../FavouritesInfo/FavouritesInfo';
 import'./Favourites.css';
 
 
-const Favourites = () => {
+const Favourites = ({favourite}) => {
+  console.log(favourite);
   return (
     <div className='favourites'>
-      <h1 className='favourites-title text-center'>Favourites</h1>
-      <FavouritesInfo />
+      <div className="favourite">
+        <h1 className='favourites-title text-center'>Favourites</h1>
+        <FavouritesInfo />
+      </div>
     </div>
   );
 };

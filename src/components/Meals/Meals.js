@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Meal from '../Meal/Meal';
 import './Meals.css';
 
-const Meals = () => {
+const Meals = (props) => {
   const [meals, setMeals] = useState([]);
 
   useEffect(() => {
@@ -17,6 +17,7 @@ const Meals = () => {
         meals.map(meal => <Meal 
           key={meal.idMeal} 
           meal={meal}
+          addToFavHandler={props.addToFavHandler}
           />)
       }
     </div>
