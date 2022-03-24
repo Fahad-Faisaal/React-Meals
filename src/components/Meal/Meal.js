@@ -6,7 +6,14 @@ const Meal = ({meal}) => {
   return (
     <div className='meal'>
       <img src={strMealThumb} alt="" />
-      <h2 className='text-center'>{strMeal}</h2>
+      <h2 className='meal-title text-center'>{strMeal}</h2>
+      <div className='meal-info'>
+        <p className='meal-text'>Cuisine: {strArea}</p>
+        <p className='meal-text'>Catagory: {strCategory}</p>
+      </div>
+      <div className='meal-btn-container'>
+        <button className='btn btn-add'>Add To Favourites</button>
+      </div>
     </div>
   );  
 };
