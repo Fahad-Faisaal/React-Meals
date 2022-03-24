@@ -6,3 +6,26 @@
   justify-content: center;
   color: #fff;
 }
+
+input {
+  height: 28px;
+  width: 300px;
+  padding: 4px;
+  margin-right: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.btn-search {
+  padding: 6px 16px;
+  background-color: #FF6F61;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .7px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.btn-search:hover {
+  background-color: hsl(5, 100%, 62%);
+}

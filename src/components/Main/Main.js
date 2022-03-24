@@ -3,7 +3,7 @@ import './Main.css'
 import Favourites from '../Favourites/Favourites';
 import Meals from '../Meals/Meals';
 
-const Main = () => {
+const Main = ({mealName}) => {
   const [favourite, setFavourite] = useState([]);
 
   let newFavourite;
@@ -20,7 +20,7 @@ const Main = () => {
 
   return (
     <div className='main'>
-      <Meals addToFavHandler={addToFavHandler} />
+      <Meals addToFavHandler={addToFavHandler} mealName={mealName} />
       <Favourites favourite={favourite} removeHandler={removeHandler} />
     </div>
   );

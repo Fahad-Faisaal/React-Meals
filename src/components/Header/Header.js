@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 
-const Header = () => {
+const Header = ({searchHandler}) => {
+  const [searchedInput, setSearchedInput] = useState('');
+
+  const searchInputHandler = (e) => {
+    const keyValue = e.target.value;
+    setSearchedInput(keyValue);
+  }
+
   return (
     <div className='header'>
-      <h1>React Meals</h1>
+      <input onChange={searchInputHandler} type="text" placeholder='Search food' />
+      <button onClick={() => searchHandler(searchedInput)} className="btn btn-search">Search</button>
     </div>
   );
 };
